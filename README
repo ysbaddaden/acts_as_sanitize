@@ -1,0 +1,17 @@
+ActsAsSanitize
+=============
+
+This +acts_as+ extension provides the capabilities of sanitizing model
+attributes, in order to keep your database clean.
+
+Example
+=======
+
+ class Post < ActiveRecord::Base
+   acts_as_sanitize :title, :body, :on => :save
+ end
+ 
+The Post model will then sanitize the :title and :body columns on
+before_save.
+
+Copyright (c) 2010 Julien Portalier, released under the MIT license
